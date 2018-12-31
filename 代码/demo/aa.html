@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+<input type="file" multiple="multiple" id="demo">
+<ul id='content'></ul>
+</body>
+<script>
+    var demo = document.getElementById('demo');
+    demo.addEventListener('change', function() {
+        var files = this.files;
+        console.log(files);
+        var str = '';
+        for (var i = 0, len = files.length; i < len; i++) {
+            console.log(files[i]);
+            str += '<li>名称名' + files[i].name + '——文件大小:' + files[i].size / 1024 + 'KB</li>';
+        };
+        document.getElementById('content').innerHTML = str;
+    }, false);
+</script>
+</html>

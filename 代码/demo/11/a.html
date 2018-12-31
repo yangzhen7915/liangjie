@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        ul{list-style: none;}
+        ul li{
+            width:50px;height:50px;line-height:50px;border: 1px solid #333;text-align: center;cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+        <ul>
+            <li class="aa" id="aa">1</li>
+            <li class="aa">2</li>
+            <li class="aa">3</li>
+        </ul>
+        <script>
+            var aa=document.querySelector("#aa");
+            aa.onclick=function(){
+               /* aa.classList.add("blue");*/   /*在原来类名基础上添加*/
+                /*aa.classList.add("red");*/
+                /*console.log(aa.classList.item(1));*/
+
+                aa.className="blue red";  /*重新定义元素的类名*/
+            }
+        </script>
+</body>
+</html>
